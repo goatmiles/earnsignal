@@ -55,7 +55,7 @@ export function SignalPreviewCards() {
         <div className="flex items-center gap-2 border-t border-border pt-2">
           <Info className="size-4 shrink-0 text-info" />
           <span className="text-xs text-muted-foreground">
-            Based on 12 independent sources, updated weekly
+            Illustrative prototype score based on sample evidence
           </span>
         </div>
       </div>
