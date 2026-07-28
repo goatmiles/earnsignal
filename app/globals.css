@@ -1,0 +1,46 @@
+@import "tailwindcss";
+
+/*
+ * EarnSignal design tokens
+ * -----------------------------------------------------------------------
+ * Ported from the Flowstep prototype (Screens 1, 3 and 4 — the screens
+ * that used the real hex palette rather than generic Tailwind grays).
+ * Every other screen's stray colours (neutral-900/950/200, #a1a1a1,
+ * #ff6467, border-white/10) are treated as drift and mapped back to these
+ * canonical tokens wherever they show up, per the Stage 0 brief.
+ */
+@theme inline {
+  /* surfaces, darkest to lightest */
+  --color-background: #0b0d10; /* page background */
+  --color-panel: #14171c; /* sidebar / header bar */
+  --color-card: #1b1f25; /* cards, inputs, popovers */
+  --color-border: #2a2f37;
+
+  /* text */
+  --color-foreground: #f4f3ee; /* primary text */
+  --color-muted-foreground: #979da7; /* secondary / label text */
+
+  /* the one brand accent — used for primary actions, scores, highlights */
+  --color-accent: #b7ff4a;
+  --color-accent-foreground: #0b0d10; /* text/icons sitting on the accent */
+
+  /* status colours used across evidence, risk and competition indicators */
+  --color-danger: #ff6257;
+  --color-info: #63a8ff;
+  --color-warning: #ffb547;
+
+  /* type */
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, SFMono-Regular, Menlo,
+    monospace;
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+  font-family: var(--font-sans);
+}
+
+/* Keep default scrollbars visible — the Flowstep export hid them globally
+   for its embed preview, but that's an accessibility regression in a real
+   site, so it isn't carried over. */
